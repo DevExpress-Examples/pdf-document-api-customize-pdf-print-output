@@ -8,7 +8,7 @@
 
 * [Program.cs](./CS/CustomizePrintSettings/Program.cs) (VB: [Program.vb](./VB/CustomizePrintSettings/Program.vb))
 <!-- default file list end -->
-# How to customize PDF print output 
+# PDF Document API - Customize PDF Print Output 
 
 
 This example shows how to customize print output and change settings for a page to be printed. 
