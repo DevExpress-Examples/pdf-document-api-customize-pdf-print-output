@@ -26,7 +26,7 @@ Namespace CustomizePrintSettings
         End Sub
 
         Private Shared Sub OnQueryPageSettings(ByVal sender As Object, ByVal e As PdfQueryPageSettingsEventArgs)
-            ' Print the second page in landscape size.
+            ' Print the second page with the landscape orientation.
             If e.PageNumber = 2 Then
                 e.PageSettings.Landscape = True
             Else

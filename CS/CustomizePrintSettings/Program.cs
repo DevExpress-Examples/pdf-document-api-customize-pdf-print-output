@@ -31,7 +31,7 @@ namespace CustomizePrintSettings {
         }
 
         private static void OnQueryPageSettings(object sender, PdfQueryPageSettingsEventArgs e) {
-            // Print the second page in landscape size.
+            // Print the second page with the landscape orientation.
             if (e.PageNumber == 2) {
                 e.PageSettings.Landscape = true;
             }
