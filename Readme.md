@@ -6,18 +6,20 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Program.cs](./CS/CustomizePrintSettings/Program.cs) (VB: [Program.vb](./VB/CustomizePrintSettings/Program.vb))
+
 <!-- default file list end -->
-# PDF Document API - Customize PDF Print Output 
+# PDF Document API - Customize PDF Print Output
 
+This example shows how to customize the print output and change settings for a page to be printed. 
 
-This example shows how to customize print output and change settings for a page to be printed. 
+To specify the output to print, handle [PdfDocumentProcessor.PrintPage](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor.PrintPage) event and use the `PdfPrintPageEventArgs.Graphics` property. For example, to draw an image on each page, call the <strong>Graphics.DrawImage</strong> method. 
 
+You can print each document page using different page settings. For example, to print the second page in landscape size set the `PdfQueryPageSettingsEventArgs.PageSettings.Landscape` property to true when the [PdfDocumentProcessor.QueryPageSettings](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor.QueryPageSettings) event is handled.
 
-<h3>Description</h3>
+## Files to Look At
 
-To specify the output to print, handle the&nbsp;<a href="https://documentation.devexpress.com/#DocumentServer/DevExpressPdfPdfDocumentProcessor_PrintPagetopic">PdfDocumentProcessor.PrintPage </a>event and use the <strong>Graphics</strong> property of the <strong>PdfPrintPageEventArgs</strong>. For example, to draw an image on each page, call the <strong>Graphics.DrawImage</strong> method. <br><br>You can print each page of a document using different page settings. For example, to print the second page in landscape size, set&nbsp; the <strong>PdfQueryPageSettingsEventArgs.PageSettings.Landscape</strong> property to true when the <a href="https://documentation.devexpress.com/#DocumentServer/DevExpressPdfPdfDocumentProcessor_QueryPageSettingstopic">PdfDocumentProcessor.QueryPageSettings </a>event is handled.
+* [Program.cs](./CS/CustomizePrintSettings/Program.cs) (VB: [Program.vb](./VB/CustomizePrintSettings/Program.vb))
 
-<br/>
+  ## Documentation
 
-
+  * [Printing in PDF Document API](https://docs.devexpress.com/OfficeFileAPI/404300/pdf-document-api/printing?p=netframework)
