@@ -1,13 +1,20 @@
-﻿using DevExpress.Pdf;
+﻿using DevExpress.Drawing;
+using DevExpress.Pdf;
+using System;
 using System.Drawing;
+using System.IO;
 
-namespace CustomizePrintSettings {
-    class Program {
-        static void Main(string[] args) {
+namespace CustomizePrintSettings
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
 
             // Create a PDF Document Processor instance and load a PDF into it.
-            using (PdfDocumentProcessor documentProcessor = new PdfDocumentProcessor()) {
-                documentProcessor.LoadDocument(@"..\..\Demo.pdf");
+            using (PdfDocumentProcessor documentProcessor = new PdfDocumentProcessor())
+            {
+                documentProcessor.LoadDocument(@"..\..\..\Demo.pdf");
 
                 // Declare the PDF printer settings.
                 PdfPrinterSettings settings = new PdfPrinterSettings();
@@ -30,20 +37,23 @@ namespace CustomizePrintSettings {
             }
         }
 
-        private static void OnQueryPageSettings(object sender, PdfQueryPageSettingsEventArgs e) {
+        private static void OnQueryPageSettings(object sender, PdfQueryPageSettingsEventArgs e)
+        {
             // Print the second page with the landscape orientation.
-            if (e.PageNumber == 2) {
+            if (e.PageNumber == 2)
+            {
                 e.PageSettings.Landscape = true;
             }
             else e.PageSettings.Landscape = false;
         }
 
         // Specify what happens when the PrintPage event is raised.
-        private static void OnPrintPage(object sender, PdfPrintPageEventArgs e) {
-
-            // Draw a picture on each printed page.        
-            using (Bitmap image = new Bitmap(@"..\..\DevExpress.png"))
-
+        private static void OnPrintPage(object sender, PdfPrintPageEventArgs e)
+        {
+            // Draw a picture on each printed page.
+            byte[] imageBytes = File.ReadAllBytes(@"..\..\..\DevExpress.png");
+            string imageBase64 = Convert.ToBase64String(imageBytes);
+            using (DXImage image = DXImage.FromBase64String(imageBase64))
                 e.Graphics.DrawImage(image, new RectangleF(10, 30, image.Width / 2, image.Height / 2));
         }
     }

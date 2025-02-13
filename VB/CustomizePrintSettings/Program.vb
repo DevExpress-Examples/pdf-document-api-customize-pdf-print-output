@@ -1,5 +1,7 @@
-Imports DevExpress.Pdf
 Imports System.Drawing
+Imports System.IO
+Imports DevExpress.Drawing
+Imports DevExpress.Pdf
 
 Namespace CustomizePrintSettings
 
@@ -8,7 +10,7 @@ Namespace CustomizePrintSettings
         Shared Sub Main(ByVal args As String())
             ' Create a PDF Document Processor instance and load a PDF into it.
             Using documentProcessor As PdfDocumentProcessor = New PdfDocumentProcessor()
-                documentProcessor.LoadDocument("..\..\Demo.pdf")
+                documentProcessor.LoadDocument("..\..\..\Demo.pdf")
                 ' Declare the PDF printer settings.
                 Dim settings As PdfPrinterSettings = New PdfPrinterSettings()
                 ' Specify the page numbers to be printed.
@@ -36,8 +38,10 @@ Namespace CustomizePrintSettings
 
         ' Specify what happens when the PrintPage event is raised.
         Private Shared Sub OnPrintPage(ByVal sender As Object, ByVal e As PdfPrintPageEventArgs)
-            ' Draw a picture on each printed page.        
-            Using image As Bitmap = New Bitmap("..\..\DevExpress.png")
+            ' Draw a picture on each printed page.
+            Dim imageBytes As Byte() = File.ReadAllBytes("..\..\..\DevExpress.png")
+            Dim imageBase64 As String = Convert.ToBase64String(imageBytes)
+            Using image As DXImage = DXImage.FromBase64String(imageBase64)
                 e.Graphics.DrawImage(image, New RectangleF(10, 30, image.Width \ 2, image.Height \ 2))
             End Using
         End Sub
