@@ -21,9 +21,9 @@ You can print each document page using different page settings. For example, to 
 
 * [Program.cs](./CS/CustomizePrintSettings/Program.cs) (VB: [Program.vb](./VB/CustomizePrintSettings/Program.vb))
 
-  ## Documentation
+ ## Documentation
 
-  * [Printing in PDF Document API](https://docs.devexpress.com/OfficeFileAPI/404300/pdf-document-api/printing?p=netframework)
+ * [Printing in PDF Document API](https://docs.devexpress.com/OfficeFileAPI/404300/pdf-document-api/printing?p=netframework)
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
