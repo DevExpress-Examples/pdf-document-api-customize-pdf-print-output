@@ -21,7 +21,7 @@ You can print each document page using different page settings. For example, to 
 
  * [Printing in PDF Document API](https://docs.devexpress.com/OfficeFileAPI/404300/pdf-document-api/printing?p=netframework)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=pdf-document-api-customize-pdf-print-output&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=pdf-document-api-customize-pdf-print-output&~~~was_helpful=no)
 
