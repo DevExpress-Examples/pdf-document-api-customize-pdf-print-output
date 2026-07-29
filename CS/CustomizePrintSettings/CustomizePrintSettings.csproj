@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
@@ -8,10 +8,10 @@
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Document.Processor" Version="24.2.*"/>
-    <PackageReference Include="DevExpress.Drawing.Skia" Version="24.2.*" />
-    <PackageReference Include="Microsoft.CSharp" />
-    <PackageReference Include="System.Data.DataSetExtensions" />
+    <PackageReference Include="DevExpress.Document.Processor"/>
+    <PackageReference Include="DevExpress.Drawing.Skia"/>
+    <PackageReference Include="Microsoft.CSharp"/>
+    <PackageReference Include="System.Data.DataSetExtensions"/>
   </ItemGroup>
   <ItemGroup>
     <None Update="Demo.pdf">
