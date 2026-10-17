@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>
@@ -15,7 +15,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Document.Processor" Version="24.2.*" />
-    <PackageReference Include="DevExpress.Drawing.Skia" Version="24.2.*"/>
+    <PackageReference Include="DevExpress.Document.Processor" Version="26.1.*" />
+    <PackageReference Include="DevExpress.Drawing.Skia" Version="26.1.*" />
   </ItemGroup>
 </Project>
